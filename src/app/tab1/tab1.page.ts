@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { babySister } from 'src/assets/profile.model';
 import { FavoriteService } from '../shared/favorite.service';
 
@@ -12,7 +13,7 @@ export class Tab1Page {
   babySister:babySister[];
   isSelected: boolean = false;
 
-  constructor(private favoriteSrv: FavoriteService) {
+  constructor(private favoriteSrv: FavoriteService, private route:Router) {
     this.babySister = [
       {
         userid:1,
@@ -42,6 +43,10 @@ export class Tab1Page {
   onAddToFavorite(userIndex: number){
     this.babySister[userIndex].isLike = !this.babySister[userIndex].isLike;
     this.favoriteSrv.addOrDelete(this.babySister[userIndex]);
+  }
+
+  onSingleProfilePage(){
+    this.route.navigateByUrl('single-profile');
   }
 
 }
