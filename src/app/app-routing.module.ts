@@ -5,7 +5,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'single-profile',
+    loadChildren: () => import('./single-profile/single-profile.module').then( m => m.SingleProfilePageModule)
   }
+
 ];
 @NgModule({
   imports: [
