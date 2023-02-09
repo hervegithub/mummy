@@ -1,0 +1,42 @@
+ion-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.title{
+    font-weight: bold;
+}
+
+ion-content{
+    font-size: 14px;
+
+    ion-item{
+        font-size: 14px;
+
+        .response{
+            color: #6a64ff;
+            font-weight: bold;
+        }
+    }
+}
+
+.profile{
+    --background: #6a64ff;
+
+    img{
+        border-radius: 5px;
+    }
+
+    h4{
+        font-weight: bold;
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    p{
+        color: #ffffff;
+        font-style: italic;
+        font-size: 12px;
+    }
+}
+

@@ -1,5 +1,8 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-searchbar class="ion-no-border"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
@@ -7,17 +10,17 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-list-header> 20 Profiles disponibles </ion-list-header>
-    <ion-item lines="none" *ngFor="let babysister of babySister; let i= index ">
+    <ion-item lines="none" *ngFor="let babysister of babySister; let i= index " (click)="onSingleProfilePage()">
       <div slot="start" style="margin-top:-33px;">
         <img height="50" width="50" src="../../assets/profile.jpg" alt="photo profil">
       </div>
-      <div>
+      <div class="item-content">
         <ion-label>
-          <h4>{{babysister.seddonime}}</h4>
+          <h4>{{babysister.seddonime}} . {{babysister.nombreMission}}</h4> <span>Vérifié 
+            <ion-icon name="shield-checkmark-outline" color="primary"></ion-icon></span> 
           <p>Listen, I've had a  messed  messed  messed pretty messed up day fgsd...</p>
         </ion-label><br>
         <ion-label class="details">
-          <p>Missions effectués : 01</p>
           <span>2000 FCFA/HEURE</span>
         </ion-label>
       </div>
