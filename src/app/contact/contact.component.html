@@ -1,0 +1,22 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="tertiary">Annuler</ion-button>
+    </ion-buttons>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <div>
+    <h4>Choississez la periode</h4>
+    <p>Vous pouvez également recruter pour un seul jour</p>
+
+    <ion-datetime
+      presentation="date"
+      [multiple]="true"
+      [value]="['2022-06-03', '2022-06-13', '2022-06-29']"></ion-datetime>
+    </div>
+
+</ion-content>

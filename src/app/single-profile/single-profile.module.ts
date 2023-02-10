@@ -8,6 +8,7 @@ import { SingleProfilePageRoutingModule } from './single-profile-routing.module'
 
 import { SingleProfilePage } from './single-profile.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
